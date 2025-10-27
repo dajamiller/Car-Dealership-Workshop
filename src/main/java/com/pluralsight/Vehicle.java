@@ -89,8 +89,8 @@ public class Vehicle {
         this.odometer = odometer;
     }
 
-    //    public int getVehicleByVin() {
-//        return vin;
+//        public int getVehicleByVin() {
+//        return null;
 //    }
 //
 //    public int getVehicleByYear() {

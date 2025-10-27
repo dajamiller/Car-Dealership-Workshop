@@ -5,6 +5,16 @@ import java.util.Scanner;
 
 public class DealershipFileManager {
 
+    public void getDealership(){
+        //loadfrom csv;
+        //readfromcsv;
+        // create dealership object
+        // populate inventory(list of vehicles)
+    }
+    public void saveDealership(){
+        // method will overwrite file with current dealership info and inventory
+    }
+
     public class ReadFile {
         public static void main(String[] args) {
             File inventoryFile = new File("inventory.csv");
