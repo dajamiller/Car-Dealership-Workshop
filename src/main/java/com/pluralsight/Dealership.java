@@ -45,13 +45,13 @@ public class Dealership {
         this.phone = phone;
     }
 
-    public String addVehicle(vehicle) {
-        return null;
-    }
-    public String removeVehicle(vehicle)
-    public String getAllVehicles() {
-        return null;
-    }
+//    public String addVehicle(vehicle) {
+//        return null;
+//    }
+//    public String removeVehicle(vehicle)
+//    public String getAllVehicles() {
+//        return null;
+//    }
 
 
 //    getVehiclesByPrice(){

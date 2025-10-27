@@ -6,10 +6,30 @@ import java.util.Scanner;
 public class DealershipFileManager {
 
     public void getDealership(){
+        //return delaership onject
+        Dealership dealership;
+        //buffered reader
+        try (
+                BufferedReader br = new BufferedReader(new FileReader("inventory.csv"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+                //also need to parse out list parts
+                String name = line.split(",")[0];
+                String address = line.split(",")[1];
+                String phone = line.split(",")[2];
+                //dealership object
+                dealership = new Dealership(name,address, phone);
+            }
+        } catch (
+                IOException e) {
+            System.out.println("Error reading file.");
+        }
         //loadfrom csv;
         //readfromcsv;
         // create dealership object
         // populate inventory(list of vehicles)
+
     }
     public void saveDealership(){
         // method will overwrite file with current dealership info and inventory
@@ -29,16 +49,7 @@ public class DealershipFileManager {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-            try (
-                    BufferedReader br = new BufferedReader(new FileReader("inventory.csv"))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    System.out.println(line);
-                }
-            } catch (
-                    IOException e) {
-                System.out.println("Error reading file.");
-            }
+
 
             try (
                     BufferedWriter bw = new BufferedWriter(new FileWriter("inventory.csv"))) {
