@@ -8,13 +8,13 @@ public class Vehicle {
     private String model;
     private String vehicleType;
     private String color;
-    private double price;
+    private double vehiclePrice;
     private int odometer;
 
     //Constructor Vehicle
 
 
-    public Vehicle(int vin, int year, String make, String model,  String vehicleType, String color, int odometer, double price) {
+    public Vehicle(int vin, int year, String make, String model,  String vehicleType, String color, int odometer, double vehiclePrice) {
         this.vin = vin;
         this.year = year;
         this.make = make;
@@ -22,7 +22,7 @@ public class Vehicle {
         this.vehicleType = vehicleType;
         this.color = color;
         this.odometer = odometer;
-        this.price = price;
+        this.vehiclePrice = vehiclePrice;
     }
 
     public int getVin() {
@@ -73,12 +73,12 @@ public class Vehicle {
         this.color = color;
     }
 
-    public double getPrice() {
-        return price;
+    public double getvehiclePrice() {
+        return vehiclePrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setVehiclePrice(double vehiclePrice) {
+        this.vehiclePrice = vehiclePrice;
     }
 
     public int getOdometer() {
@@ -113,8 +113,8 @@ public class Vehicle {
 //        return color;
 //    }
 //
-//    public double getPrice() {
-//        return price;
+//    public double getVehiclePrice() {
+//        return vehiclePrice;
 //    }
 //    public int getOdometer() {
 //        return odometer;
@@ -125,7 +125,7 @@ public class Vehicle {
         return String.format("%d|%d|%s|%s|%s|%s|%d|%f",
                 this.vin, this.year, this.make,
                 this.model, this.vehicleType,
-                this.color, this.odometer, this.price);
+                this.color, this.odometer, this.vehiclePrice);
     }
 
 

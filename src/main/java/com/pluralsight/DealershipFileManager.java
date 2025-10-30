@@ -8,18 +8,27 @@ public class DealershipFileManager {
     public void getDealership(){
         //return delaership onject
         Dealership dealership;
+
         //buffered reader
-        try (
-                BufferedReader br = new BufferedReader(new FileReader("inventory.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("inventory.csv"))) {
             String line;
+            line = br.readLine();
+            String[] dealershipArray = line.split("\\|");
+
+            //also need to parse out list parts
+            String name = line.split(",")[0];
+            String address = line.split(",")[1];
+            String phone = line.split(",")[2];
+
+            //dealership object
+            dealership = new Dealership(name,address, phone);
+
+
+
+
             while ((line = br.readLine()) != null) {
+
                 System.out.println(line);
-                //also need to parse out list parts
-                String name = line.split(",")[0];
-                String address = line.split(",")[1];
-                String phone = line.split(",")[2];
-                //dealership object
-                dealership = new Dealership(name,address, phone);
             }
         } catch (
                 IOException e) {
